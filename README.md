@@ -1,5 +1,7 @@
 # @clroot/react-kakao-postcode
 
+[![npm version](https://img.shields.io/npm/v/@clroot/react-kakao-postcode)](https://www.npmjs.com/package/@clroot/react-kakao-postcode)
+
 카카오 우편번호 서비스를 위한 React 라이브러리입니다. [react-daum-postcode](https://github.com/kmsbernard/react-daum-postcode)에 영감을 받아, 카카오 우편번호 서비스의 [도메인 및 네임스페이스 변경](https://github.com/daumPostcode/QnA/issues/1498)에 대응하여 headless hook 기반의 새로운 구조로 재설계하였습니다.
 
 ## 설치
