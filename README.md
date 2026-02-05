@@ -1,13 +1,13 @@
-# react-kakao-postcode
+# @clroot/react-kakao-postcode
 
 카카오 우편번호 서비스를 위한 React 라이브러리입니다. [react-daum-postcode](https://github.com/kmsbernard/react-daum-postcode)에 영감을 받아, 카카오 우편번호 서비스의 [도메인 및 네임스페이스 변경](https://github.com/daumPostcode/QnA/issues/1498)에 대응하여 headless hook 기반의 새로운 구조로 재설계하였습니다.
 
 ## 설치
 
 ```bash
-bun add react-kakao-postcode
-# npm install react-kakao-postcode
-# pnpm add react-kakao-postcode
+bun add @clroot/react-kakao-postcode
+# npm install @clroot/react-kakao-postcode
+# pnpm add @clroot/react-kakao-postcode
 ```
 
 React 16.8 이상이 필요합니다.
@@ -19,7 +19,7 @@ React 16.8 이상이 필요합니다.
 `useKakaoPostcode`는 모든 로직을 담당하는 핵심 hook입니다. UI는 직접 구성합니다.
 
 ```tsx
-import { useKakaoPostcode } from 'react-kakao-postcode';
+import { useKakaoPostcode } from '@clroot/react-kakao-postcode';
 
 function AddressSearch() {
   const { status, error, embedRef, open } = useKakaoPostcode({
@@ -74,7 +74,7 @@ function AddressSearch() {
 검색창을 페이지에 바로 표시합니다.
 
 ```tsx
-import { Postcode } from 'react-kakao-postcode';
+import { Postcode } from '@clroot/react-kakao-postcode';
 
 function AddressForm() {
   return (
@@ -100,7 +100,7 @@ function AddressForm() {
 children을 클릭하면 팝업으로 검색창이 열립니다.
 
 ```tsx
-import { PostcodePopup } from 'react-kakao-postcode';
+import { PostcodePopup } from '@clroot/react-kakao-postcode';
 
 function AddressButton() {
   return (
@@ -169,7 +169,7 @@ children에 함수를 전달하면 상태에 따라 UI를 분기할 수 있습�
 React 없이 스크립트 로딩만 필요한 경우 `createPostcodeLoader`를 사용할 수 있습니다.
 
 ```typescript
-import { createPostcodeLoader } from 'react-kakao-postcode';
+import { createPostcodeLoader } from '@clroot/react-kakao-postcode';
 
 const loader = createPostcodeLoader({
   timeout: 5000,
@@ -185,7 +185,7 @@ instance.open();
 
 ## react-daum-postcode에서 마이그레이션
 
-| react-daum-postcode | react-kakao-postcode |
+| react-daum-postcode | @clroot/react-kakao-postcode |
 |:---|:---|
 | `<DaumPostcodeEmbed onComplete={fn} />` | `<Postcode onComplete={fn} />` |
 | `const open = useDaumPostcodePopup()` | `const { open } = useKakaoPostcode({ onComplete: fn })` |

@@ -1,5 +1,5 @@
 {
-  "name": "react-kakao-postcode",
+  "name": "@clroot/react-kakao-postcode",
   "version": "1.0.0",
   "description": "React component for Kakao Postcode service (formerly Daum Postcode)",
   "license": "MIT",
